@@ -46,7 +46,7 @@ COPY ./docker-start.sh ./duino-coin/docker-start.sh
 # Stage 2: Create the final lightweight image
 FROM python:3
 
-LABEL org.opencontainers.image.source="https://github.com/revoxhere/duino-coin"
+LABEL org.opencontainers.image.source="https://github.com/simeononsecurity/docker-duino-coin/"
 LABEL org.opencontainers.image.description="Dockerized Duino-Coin Miner"
 LABEL org.opencontainers.image.authors="revoxhere,simeononsecurity"
 
