@@ -20,7 +20,7 @@ RUN git clone https://github.com/revoxhere/duino-coin.git
 
 # Install rustup for compilation
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
-ENV PATH="/root/.cargo/bin:${PATH}"
+SHELL ["/bin/bash", "--login", "-c"]
 
 # Download duino fasthash
 RUN wget https://server.duinocoin.com/fasthash/libducohash.tar.gz
