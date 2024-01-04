@@ -59,6 +59,7 @@ docker run -td --name duco-container --restart unless-stopped \
 ```
 
 
+
 Feel free to adjust the environment variables as needed for your mining preferences. The example includes some commonly used options, and you can refer to the [Duino-Coin README](https://github.com/revoxhere/duino-coin) for more details on available configurations.
 
 If you have any questions or need further assistance, don't hesitate to reach out!
