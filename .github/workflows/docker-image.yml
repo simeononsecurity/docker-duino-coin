@@ -44,9 +44,9 @@ jobs:
           cache-from: |
             type=gha .
             type=inline .
-            simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
-            type=registry,ref=simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+            ${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
           cache-to: |
-            type=registry,ref=simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
-          tags: simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest, ghcr.io/simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+            type=registry,ref=${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/duinocoin:latest, ghcr.io/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
           github-token: ${{ secrets.PAT_TOKEN }}
