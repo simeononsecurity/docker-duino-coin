@@ -33,16 +33,20 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.PAT_TOKEN }}
-
-      - name: Build the Docker image
-        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes && docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/duinocoin:latest --progress=plain --push .
-
+  
       - name: Build and push
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: simeononsecurity/duinocoin:latest
-      - name: Build the simeononsecurity/duinocoin:latest Docker image for Github Registry
-        run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes && docker buildx build --platform linux/amd64,linux/arm64 -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest --progress=plain --push .
+          file: Dockerfile
+          cache-from: |
+            type=gha .
+            type=inline .
+            simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+            type=registry,ref=simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+          cache-to: |
+            type=registry,ref=simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+          tags: simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest, ghcr.io/simeononsecurity/${{ secrets.DOCKER_USERNAME }}/duinocoin:latest
+          github-token: ${{ secrets.PAT_TOKEN }}
