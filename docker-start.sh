@@ -28,6 +28,16 @@ full_path="${base_path}/${highest_version}"
 #Create Expected Config File
 touch "${full_path}/Miner_config.cfg"
 
+# Detect ARM architecture
+if [ "$(uname -m)" = "armv7l" ] || [ "$(uname -m)" = "aarch64" ]; then
+  DUCO_RASPI_CPU_IOT="y"
+else
+  DUCO_RASPI_CPU_IOT="n"
+fi
+
+# Export for Dockerfile to pick up
+export DUCO_RASPI_CPU_IOT
+
 echo '[PC Miner]' > "${full_path}/Miner_config.cfg"
 echo "username = ${DUCO_USERNAME}" >> "${full_path}/Miner_config.cfg"
 echo "mining_key = $(echo -n ${DUCO_MINING_KEY} | base64)" >> "${full_path}/Miner_config.cfg"
