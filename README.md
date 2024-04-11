@@ -58,6 +58,27 @@ docker run -td --name duco-container --restart unless-stopped \
   duinocoin
 ```
 
+### Run the from docker compose
+
+# Create the docker compose file
+```bash
+nano docker-compose.yml
+
+# Copy and past into the docker-compose.yaml file in your editor
+version: '3'
+services:
+  duco-container:
+    image: simeononsecurity/duinocoin
+    container_name: duco-container
+    restart: unless-stopped
+    environment:
+      - DUCO_USERNAME=your_actual_username_or_walletname
+      - DUCO_MINING_KEY=your_actual_mining_key
+
+# Run the file
+docker-compose up -d
+```
+
 
 
 Feel free to adjust the environment variables as needed for your mining preferences. The example includes some commonly used options, and you can refer to the [Duino-Coin README](https://github.com/revoxhere/duino-coin) for more details on available configurations.
