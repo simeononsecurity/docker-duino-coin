@@ -60,8 +60,8 @@ docker run -td --name duco-container --restart unless-stopped \
 
 ### Run the from docker compose
 
-# Create the docker compose file
 ```bash
+# Create the docker compose file
 nano docker-compose.yml
 
 # Copy and past into the docker-compose.yaml file in your editor
