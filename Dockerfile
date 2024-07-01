@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
 RUN git clone https://github.com/revoxhere/duino-coin.git
 
 # Install rustup for compilation
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -sSf | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ENV PATH="/root/.cargo/bin:${PATH}"
 
 # Download duino fasthash
