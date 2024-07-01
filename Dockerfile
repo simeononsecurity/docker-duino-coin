@@ -13,6 +13,7 @@ RUN apt-get update && apt full-upgrade -y && apt-get install -y --no-install-rec
     python3-pip \
     python3-dev \
     wget \
+    build-essential \
     git && \
     rm -rf /var/lib/apt/lists/* 
 
