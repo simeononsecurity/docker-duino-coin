@@ -29,7 +29,7 @@ full_path="${base_path}/${highest_version}"
 touch "${full_path}/Miner_config.cfg"
 
 # Detect ARM architecture
-if [ "$(uname -m)" = "armv7l" ] || [ "$(uname -m)" = "aarch64" ]; then
+if [ "$(uname -m)" = "armv6l" ] || [ "$(uname -m)" = "armv7l" ] || [ "$(uname -m)" = "aarch64" ]; then
   DUCO_RASPI_CPU_IOT="y"
 else
   DUCO_RASPI_CPU_IOT="n"
