@@ -67,7 +67,7 @@ docker run -td --name duco-container --restart unless-stopped \
 version: '3'
 services:
   duco-container:
-    image: simeononsecurity/duinocoin
+    image: simeononsecurity/duinocoin:latest
     container_name: duco-container
     restart: unless-stopped
     environment:
@@ -75,16 +75,16 @@ services:
       - DUCO_MINING_KEY=your_actual_mining_key
       - DUCO_INTENSITY=50 
       - DUCO_THREADS=2 
-      - DUCO_START_DIFF="MEDIUM" 
+      - DUCO_START_DIFF=MEDIUM 
       - DUCO_DONATE=1 
-      - DUCO_IDENTIFIER="Auto" 
-      - DUCO_ALGORITHM="DUCO-S1" 
-      - DUCO_LANGUAGE="english" 
+      - DUCO_IDENTIFIER=Auto 
+      - DUCO_ALGORITHM=DUCO-S1 
+      - DUCO_LANGUAGE=english  # Adjusted the language key if needed
       - DUCO_SOC_TIMEOUT=20 
       - DUCO_REPORT_SEC=300 
-      - DUCO_RASPI_LEDS="n" 
-      - DUCO_RASPI_CPU_IOT="n" 
-      - DUCO_DISCORD_RP="n" 
+      - DUCO_RASPI_LEDS=n 
+      - DUCO_RASPI_CPU_IOT=n 
+      - DUCO_DISCORD_RP=n
 ```
 
 ##### Run the file
