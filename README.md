@@ -2,11 +2,7 @@
 
 This repository contains a Dockerized version of the Duino-Coin Miner.
 
-[![Docker Image CI](https://github.com/simeononsecurity/docker-duino-coin/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-duino-coin/actions/workflows/docker-image.yml)
-
-<a href="https://hub.docker.com/r/simeononsecurity/duinocoin" rel="me"><img src="https://img.shields.io/badge/DockerHub-Image-blue" alt="Docker Hub Image simeononsecurity/duinocoin"></a>
-
-<a href="https://simeononsecurity.com" rel="me"><img src="https://img.shields.io/badge/SimeonOnSecurity-Website-Gray" alt="simeononsecurity.com website"></a>
+[![Sponsor](https://img.shields.io/badge/Sponsor-Click%20Here-ff69b4)](https://github.com/sponsors/simeononsecurity) [![Docker Image CI](https://github.com/simeononsecurity/docker-duino-coin/actions/workflows/docker-image.yml/badge.svg)](https://github.com/simeononsecurity/docker-duino-coin/actions/workflows/docker-image.yml)[![Docker Hub Image simeononsecurity/duinocoin](https://img.shields.io/badge/DockerHub-Image-blue)](https://hub.docker.com/r/simeononsecurity/duinocoin)[![simeononsecurity.com website](https://img.shields.io/badge/SimeonOnSecurity-Website-Gray)](https://simeononsecurity.com)
 ## Docker Container
 
 ### Build or Pull the Docker Image
