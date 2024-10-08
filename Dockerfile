@@ -33,12 +33,12 @@ RUN tar -xvf libducohash.tar.gz
 # Go to the dir
 WORKDIR /app/libducohash
 
-#Compile it
-RUN rustup install stable && rustup default stable
-RUN cargo build --release
+# #Compile it
+# RUN rustup install stable && rustup default stable
+# RUN cargo build --release
 
-#Extract the module and move it to /app/duino-coin
-RUN mv target/release/libducohasher.so /app/duino-coin/libducohasher.so
+# #Extract the module and move it to /app/duino-coin
+# RUN mv target/release/libducohasher.so /app/duino-coin/libducohasher.so
 
 WORKDIR /app/
 
